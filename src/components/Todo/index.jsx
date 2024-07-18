@@ -15,7 +15,7 @@ const Todo = () => {
     <section className={styles.todoContainer}> 
       <h2>Todo</h2>
       <div>
-        <Formik initialValues={{ content:''}} onSubmit={addTask}>
+        <Formik initialValues={{ content:''}} onSubmit={onSubmit}>
           <Form>
             <Field name="content" placeholder="Enter task" />
             <input type="submit" value="Add" />
