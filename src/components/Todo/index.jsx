@@ -1,5 +1,6 @@
 import { Formik, Form, Field } from "formik";
 import useTodo from "../../hooks/useTodo";
+import Task from "../Task";
 import styles from "./Todo.module.scss"; 
 
 const Todo = () => {
@@ -25,8 +26,9 @@ const Todo = () => {
       <div>
         <h3>List Tasks</h3>
         <ol>
-          {tasks.map((task) => <li key={task.id}>{task.content}</li>
-          )}
+          {tasks.map((task) => (
+            <Task key={task.id} task={task} />
+          ))}
         </ol>
       </div>
     </section>
