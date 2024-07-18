@@ -1,28 +1,33 @@
 import PropTypes from "prop-types";
+import cx from "classnames";
+import styles from './Task.module.scss';
 
 const Task = (props) => {
   const {
-      task: { id, content, isDone },
-      setIsDone,
-      deleteTask,
+    task: { id, content, isDone },
+    setIsDone,
+    deleteTask,
   } = props;
+
+  const spanClasses = cx(styles.content, { [styles['is-done']]: isDone });
+
   return (
-    <li>
-          <input type="checkbox" checked={isDone} onChange={()=>setIsDone(id)} />
-      <span >{content}</span>
-          <button onClick={() => {deleteTask(id)}}>X</button>
+    <li className={styles.taskItem}>
+      <input type="checkbox" checked={isDone} onChange={() => setIsDone(id)} />
+      <span className={spanClasses}>{content}</span>
+      <button onClick={() => deleteTask(id)}>X</button>
     </li>
   );
 };
 
 Task.propTypes = {
-    task: PropTypes.shape({                            //shape significa [objet]
-    id: PropTypes.string.isRequired,              
+  task: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     isDone: PropTypes.bool.isRequired,
   }),
-    setIsDone: PropTypes.func,
-    deleteTask: PropTypes.func,
+  setIsDone: PropTypes.func.isRequired,
+  deleteTask: PropTypes.func.isRequired,
 };
 
 export default Task;

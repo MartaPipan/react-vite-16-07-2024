@@ -1,0 +1,28 @@
+.content {
+    flex: 1;
+}
+.is-done {
+    text-decoration: line-through;
+}
+
+.taskItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.taskItem input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.taskItem span {
+    flex: 1;
+}
+
+.taskItem button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
