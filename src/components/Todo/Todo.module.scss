@@ -1,0 +1,30 @@
+.todoContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+
+    input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+ol {
+    list-style-type: decimal;
+}
