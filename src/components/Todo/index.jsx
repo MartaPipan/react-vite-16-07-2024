@@ -1,3 +1,4 @@
+
 import useTodo from "../../hooks/useTodo";
 
 const Todo = () => {
@@ -6,7 +7,6 @@ const Todo = () => {
   ]);
 
     return (
-      
         
     <section>
       <h2>Todo</h2>
