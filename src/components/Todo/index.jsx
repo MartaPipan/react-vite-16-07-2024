@@ -6,6 +6,10 @@ const Todo = () => {
   const { tasks, addTask } = useTodo([
     { id: 1, content: "test task", isDone: false },
   ]);
+  const onSubmit = (values, formikBag) => {
+    addTask(values);
+    formikBag.resetForm();
+  }
 
   return (
     <section className={styles.todoContainer}> 
