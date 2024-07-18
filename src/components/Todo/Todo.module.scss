@@ -1,6 +1,7 @@
 .todoContainer {
-  padding: 20px;
   background-color: #f9f9f9df;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .title {
@@ -12,13 +13,14 @@
   color: rgb(207, 248, 255);
   background-color: #4194e6;
   padding: 20px;
+  margin:0;
   font-weight: 400;
 }
 
 .taskListContainer {
   border: 1px solid rgb(241, 231, 231);
   border: radius 2px;
-  margin-bottom: 10px;
+  margin: 20px 30px 10px 30px;
   padding: 10px;
   box-shadow: 1px 1px 2px 2px rgba(175, 167, 167, 0.2);
 }
@@ -48,7 +50,7 @@
 .formContainer {
   border: 1px solid rgb(241, 231, 231);
   border-radius: 2px;
-  margin-bottom: 10px;
+  margin: 10px 30px;
   padding: 10px;
   box-shadow: 1px 1px 2px 2px rgba(175, 167, 167, 0.2);
 }

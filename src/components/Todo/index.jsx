@@ -5,7 +5,7 @@ import styles from "./Todo.module.scss";
 
 const Todo = () => {
   const { tasks, addTask, setIsDone, deleteTask } = useTodo([
-    { id: "1", content: "test task", isDone: false },
+    { id: "1", content: "write your task", isDone: false },
   ]);
 
   const onSubmit = (values, formikBag) => {
