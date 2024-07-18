@@ -9,7 +9,7 @@ const Task = (props) => {
   return (
     <li>
           <input type="checkbox" checked={isDone} onChange={()=>setIsDone(id)} />
-      <span>{content}</span>
+      <span >{content}</span>
           <button onClick={() => {deleteTask(id)}}>X</button>
     </li>
   );

@@ -17,7 +17,7 @@ const useTodo = (initialTasks) => {
     
     const setIsDone = (id) => { 
         const newTasks = tasks.map((task) =>
-            task.id === id ? { ...task, isDone: true } : task);
+            task.id === id ? { ...task, isDone: !task.isDone} : task);
         setTasks(newTasks);
     }
     
