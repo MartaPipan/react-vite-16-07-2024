@@ -4,7 +4,7 @@ import Task from "../Task";
 import styles from "./Todo.module.scss"; 
 
 const Todo = () => {
-  const { tasks, addTask, setIsDone } = useTodo([
+  const { tasks, addTask, setIsDone, deleteTask } = useTodo([
     { id: '1', content: "test task", isDone: false },
   ]);
   const onSubmit = (values, formikBag) => {
@@ -28,7 +28,7 @@ const Todo = () => {
         <h3>List Tasks</h3>
         <ol>
           {tasks.map((task) => (
-            <Task key={task.id} task={task} setIsDone={setIsDone}/>
+            <Task key={task.id} task={task} setIsDone={setIsDone} deleteTask={deleteTask} />
           ))}
         </ol>
       </div>
