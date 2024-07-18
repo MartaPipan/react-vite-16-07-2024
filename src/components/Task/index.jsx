@@ -2,11 +2,12 @@ import PropTypes from "prop-types";
 
 const Task = (props) => {
   const {
-    task: { content, isDone },
+      task: { id, content, isDone },
+      setIsDone
   } = props;
   return (
     <li>
-      <input type="checkbox" value={isDone} />
+          <input type="checkbox" checked={isDone} onChange={()=>setIsDone(id)} />
       <span>{content}</span>
       <button>X</button>
     </li>
@@ -14,10 +15,12 @@ const Task = (props) => {
 };
 
 Task.propTypes = {
-  task: PropTypes.shape({                         //shape significa [objet]
+    task: PropTypes.shape({                            //shape significa [objet]
+    id: PropTypes.string.isRequired,              
     content: PropTypes.string.isRequired,
     isDone: PropTypes.bool.isRequired,
   }),
+    setIsDone: PropTypes.func,
 };
 
 export default Task;
