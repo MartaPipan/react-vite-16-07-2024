@@ -9,7 +9,7 @@ const Todo = () => {
   ]);
 
   const onSubmit = (values, formikBag) => {
-    addTask(values);
+    addTask(values.content); // Certifique-se de passar o 'content' correto
     formikBag.resetForm();
   };
 
@@ -36,7 +36,7 @@ const Todo = () => {
           <Form className={styles.form}>
             <Field
               name="content"
-              //placeholder="Enter task"
+              placeholder="Enter task"
               className={styles.input}
             />
             <input type="submit" value="ADD" className={styles.addButton} />

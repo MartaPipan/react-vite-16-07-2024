@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
-const useTodo = () => {
-  const [tasks, setTasks] = useState([]);
+const useTodo = (initialTasks = []) => {
+  const [tasks, setTasks] = useState(initialTasks);
 
   const addTask = (content) => {
     const newTask = {

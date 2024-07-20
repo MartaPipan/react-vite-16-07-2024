@@ -2,12 +2,8 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import styles from './Task.module.scss';
 
-const Task = (props) => {
-  const {
-    task: { id, content, isDone },
-    setIsDone,
-    deleteTask,
-  } = props;
+const Task = ({ task, setIsDone, deleteTask }) => {
+  const { id, content, isDone } = task;
 
   const spanClasses = cx(styles.content, { [styles['is-done']]: isDone });
 
@@ -25,7 +21,7 @@ Task.propTypes = {
     id: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     isDone: PropTypes.bool.isRequired,
-  }),
+  }).isRequired,
   setIsDone: PropTypes.func.isRequired,
   deleteTask: PropTypes.func.isRequired,
 };
