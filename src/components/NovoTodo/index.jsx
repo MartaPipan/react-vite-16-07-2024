@@ -2,7 +2,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { mdiPlus, mdiChevronDownBox } from "@mdi/js";
 import Icon from "@mdi/react";
-import useTodo from "../../hooks/useTodo";
+import useTodo from "../../hooks/useNovoTodo";
 import Task from "../NovoTask";
 import styles from "./NovoTodo.module.scss";
 

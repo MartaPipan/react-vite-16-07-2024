@@ -1,5 +1,5 @@
 import Todo from "./components/Todo";
-import NovoTodo from "./components/NovoTodo";
+import NovoTodo from "./components/NovoTodo/";
 
 const App = () => (
   <div className="App">
