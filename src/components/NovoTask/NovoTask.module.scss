@@ -1,0 +1,55 @@
+.taskItem {
+  width: 100%;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+
+}
+.input:focus {
+  border-color: transparent;
+  /* Remove a borda quando o input está focado */
+  outline: none;
+  /* Remove o contorno padrão do navegador */
+}
+
+.checkIcon {
+  color: white;
+  background-color: #5e7cbd;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.checked {
+  color: rgb(128, 0, 32);
+}
+
+.deleteButton {
+  color: white;
+  background-color: #4d0856;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.done {
+  text-decoration: line-through;
+}

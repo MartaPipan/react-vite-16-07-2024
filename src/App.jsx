@@ -1,4 +1,3 @@
-
 import Todo from "./components/Todo";
 import NovoTodo from "./components/NovoTodo";
 

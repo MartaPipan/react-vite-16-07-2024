@@ -1,40 +1,37 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
-const useTodo = (initialTasks) => {
-  const [tasks, setTasks] = useState([...initialTasks]);
-   const [showTasks, setShowTasks] = useState(true);
 
+const useTodo = () => {
+  const [tasks, setTasks] = useState([]);
+  const [showTasks, setShowTasks] = useState(true);
 
-  const addTask = (values) => {
+  const addTask = (content) => {
     const newTask = {
       id: uuidv4(),
-      content: values.content,
+      content,
       isDone: false,
     };
-    setTasks([...tasks, newTask]);
+    setTasks(prevTasks => [...prevTasks, newTask]);
   };
-    
-    
+
   const setIsDone = (id) => {
-    const newTasks = tasks.map((task) =>
-      task.id === id ? { ...task, isDone: !task.isDone } : task);
-    setTasks(newTasks);
+    setTasks(prevTasks =>
+      prevTasks.map(task =>
+        task.id === id ? { ...task, isDone: !task.isDone } : task
+      )
+    );
   };
-    
 
-    const deleteTask = (id) => {
-        const newTasks = tasks.filter((task) => task.id !== id);
-        setTasks(newTasks);
-    };
-  
-   const toggleShowTasks = () => {
-    setShowTasks(showTasks);
+  const deleteTask = (id) => {
+    setTasks(prevTasks => prevTasks.filter(task => task.id !== id));
   };
-  
-  
 
-  return { tasks, setTasks, addTask, setIsDone, deleteTask, showTasks, toggleShowTasks};
+  const toggleShowTasks = () => {
+    setShowTasks(prevShowTasks => !prevShowTasks);
+  };
+
+  return { tasks, addTask, setIsDone, deleteTask, showTasks, toggleShowTasks };
 };
 
 export default useTodo;
