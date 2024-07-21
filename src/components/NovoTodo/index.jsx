@@ -87,3 +87,19 @@ const NovoTodo = () => {
 };
 
 export default NovoTodo;
+
+
+
+//**{errors.content && touched.content && (...)}:
+//Це умовний рендеринг, який перевіряє два умови:
+
+//errors.content: перевіряє, чи є помилка для поля content.
+//touched.content: перевіряє, чи було поле content відмічено (наприклад, користувач взаємодіяв з цим полем).
+
+//<div className={styles.errorMessageContainer}>:
+//Це контейнер для повідомлення про помилку, який має клас styles.errorMessageContainer, що застосовує відповідні стилі.
+
+//<div className={styles.error}>{errors.content}</div>:
+// Вмістом цього елемента є текст помилки, що знаходиться в errors.content.
+
+ */
