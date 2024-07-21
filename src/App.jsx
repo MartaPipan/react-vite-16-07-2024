@@ -1,10 +1,11 @@
-import Todo from "./components/Todo";
-import NovoTodo from "./components/NovoTodo/";
+
+import TaskLabel from './components/TaskLabel/index';
+
 
 const App = () => (
   <div className="App">
-    <Todo />
-    <NovoTodo />
+   
+    <TaskLabel/>
   </div>
 );
 

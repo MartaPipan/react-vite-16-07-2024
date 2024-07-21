@@ -1,0 +1,195 @@
+.todoContainer {
+  /* Estilo para o contêiner principal da lista de tarefas */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  /* Estilo para o cabeçalho */
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.mainContainer {
+  /* Estilo para o contêiner principal */
+  display: flex;
+  flex-direction: align-items;
+  align-items: center;
+}
+
+.formContainer {
+  /* Estilo para o contêiner do formulário */
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form {
+  /* Estilo para o formulário */
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.label {
+  /* Estilo para o rótulo do campo */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input {
+  /* Estilo para o campo de entrada */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  transition: border-color 0.3s;
+  font-size: 16px;
+}
+
+.invalid {
+  /* Estilo para o campo de entrada inválido */
+  border-color: red;
+}
+
+.errorMessageContainer {
+  /* Estilo para o contêiner da mensagem de erro */
+  height: 1.2em;
+  /* Ajustar conforme necessário */
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  /* Adicionar margem para não empurrar o input */
+}
+
+.addButton {
+  /* Estilo para o botão de adicionar */
+  margin-left: 10px;
+  margin-right: 100px;
+  padding: 10px;
+  background-color: #5e7cbd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.controlsContainer {
+  /* Estilo para o contêiner de controle */
+  display: flex;
+  align-items: center;
+  //  justify-content: space-around;
+  width: 100%;
+  max-width: 600px;
+}
+
+.allTasks {
+  /* Estilo para o texto "All" */
+  padding: 10px;
+  padding-right: 200px;
+  margin-right: 0;
+  font-size: 1.2em;
+  color: #333;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.toggleButton {
+  /* Estilo para o botão de alternar visibilidade das tarefas */
+  color: white;
+  background-color: #4d0856;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 10px;
+  
+}
+
+.taskListContainer {
+  /* Estilo para o contêiner da lista de tarefas */
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 100px;
+
+}
+
+.taskList {
+  /* Estilo para a lista de tarefas */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.taskItem {
+  /* Estilo para cada item da tarefa */
+  width: 100%;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.inputContainer {
+  /* Estilo para o contêiner de entrada da tarefa */
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  /* Repetido para especificidade dentro do .inputContainer */
+  flex: 1;
+  border: none;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.input:focus {
+  border-color: transparent;
+  outline: none;
+}
+
+.checkIcon {
+  /* Estilo para o ícone de check */
+  color: white;
+  background-color: #5e7cbd;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.checked {
+  /* Estilo para o ícone de check quando a tarefa está completa */
+  color: rgb(128, 0, 32);
+}
+
+.deleteButton {
+  /* Estilo para o botão de deletar */
+  color: white;
+  background-color: #4d0856;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.done {
+  /* Estilo para o texto quando a tarefa está completa */
+  text-decoration: line-through;
+  color: #999;
+}
